@@ -1,17 +1,18 @@
-recipe-api
+# recipe-api
 
-Recipe API project
-
+## Recipe API project
 
 sudo docker build .
-sudo docker-compose build
-# Linting
-sudo docker-compose run --rm app sh -c "flake8"
+sudo docker compose build
 
-# Testing
-sudo docker-compose run --rm app sh -c "python manage.py test"
+## Linting
+sudo docker compose run --rm app sh -c "flake8"
 
-# Create new project
-sudo docker-compose run --rm app sh -c "django-admin startproject app ."
+## Testing
+sudo docker compose run --rm app sh -c "python manage.py test"
 
-sudo docker-compose up
+## Create new project
+sudo docker compose run --rm app sh -c "django-admin startproject app ."
+
+## Run Django App
+sudo docker compose up
