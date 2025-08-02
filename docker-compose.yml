@@ -14,7 +14,7 @@ services:
              python manage.py runserver 0.0.0.0:8000"
     environment:
       - DB_HOST=db
-      - DB_NAME=recipe
+      - DB_NAME=base-python-db
       - DB_USER=raffi
       - DB_PASSWORD=password
     depends_on:
@@ -23,7 +23,7 @@ services:
   db:
     image: postgres:13-alpine
     environment:
-      - POSTGRES_DB=recipe
+      - POSTGRES_DB=base-python-db
       - POSTGRES_USER=raffi
       - POSTGRES_PASSWORD=password
     volumes:

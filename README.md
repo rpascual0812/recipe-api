@@ -1,6 +1,6 @@
-# recipe-api
+# base-python-api
 
-## Recipe API project
+## Base Python API project
 
 sudo docker build .
 sudo docker compose build
@@ -16,3 +16,11 @@ sudo docker compose run --rm app sh -c "django-admin startproject app ."
 
 ## Run Django App
 sudo docker compose up
+
+## Set up migrations
+sudo docker compose run --rm app sh -c "python manage.py makemigrations"
+
+## Run migration
+sudo docker compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"
+
+## Create a superuser using cli
