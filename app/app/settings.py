@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_spectacular',
-    'user'
+    'user',
+    'recipe',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': os.environ.get('DB_HOST', 'localhost'),
         'PORT': os.environ.get('DB_PORT', '5432'),
-        'NAME': os.environ.get('DB_NAME', 'base-python-db'),
+        'NAME': os.environ.get('DB_NAME', 'recipe'),
         'USER': os.environ.get('DB_USER', 'raffi'),
         'PASSWORD': os.environ.get('DB_PASSWORD', 'password'),
     }

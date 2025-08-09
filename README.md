@@ -1,6 +1,6 @@
-# base-python-api
+# recipe-api
 
-## Base Python API project
+## Recipe API project
 
 sudo docker build .
 sudo docker compose build
@@ -24,3 +24,7 @@ sudo docker compose run --rm app sh -c "python manage.py makemigrations"
 sudo docker compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"
 
 ## Create a superuser using cli
+sudo docker compose run --rm app sh -c "python manage.py createsuperuser"
+
+## Create a new app
+sudo docker compose run --rm app sh -c "python manage.py startapp recipe"
